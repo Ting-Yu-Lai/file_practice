@@ -12,6 +12,7 @@ $pdo = new PDO($dsn, 'root', '');
 </head>
 
 <body>
+    <a href="./upload.php">新增檔案</a>
     <?php
     $sql = "SELECT * FROM files";
     $rows = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
@@ -41,8 +42,8 @@ $pdo = new PDO($dsn, 'root', '');
         <p>
             <?=$row['description'];?>
         </p>
-        <button type="button">edit</button>
-        <button type="button">delete</button>
+        <button type="button" onclick="location.href='edit.php?id=<?=$row['id'];?>'">edit</button>
+        <button type="button" onclick="location.href='del.php?id=<?=$row['id'];?>'">delete</button>
 
     <?php endforeach; ?>
 

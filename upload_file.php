@@ -15,9 +15,9 @@ $pdo = new PDO($dsn, 'root', '');
 <body>
     <?php
     // 檢查是否有上傳檔案
-    print_r($_POST);
-    // echo "<br>";
-    print_r($_FILES);
+    // print_r($_POST);
+    // // echo "<br>";
+    // print_r($_FILES);
     ?>
     <?php
     if (!empty($_FILES['name']['tmp_name'][0])) {
